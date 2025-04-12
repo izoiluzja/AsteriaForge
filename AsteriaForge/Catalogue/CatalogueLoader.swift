@@ -1,9 +1,16 @@
-import Foundation
+public enum CatalogueType {
+    case hipparcos
+    case tycho2
+    // case gaia, etc.
+}
 
-/// Loads raw catalogue data into usable CatalogueStar objects
 public struct CatalogueLoader {
-    public static func loadHIPCatalogue(from url: URL) -> [CatalogueStar] {
-        // TODO: Parse HIPPARCOS data
-        return []
+    public static func loadCatalogue(type: CatalogueType, from path: String) -> [CatalogueStar] {
+        switch type {
+        case .hipparcos:
+            return HIPPARCOSLoader.load(from: path)
+        case .tycho2:
+            return [] // Not implemented yet
+        }
     }
 }
