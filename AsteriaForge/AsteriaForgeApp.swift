@@ -11,7 +11,7 @@ import SwiftUI
 struct AsteriaForgeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Text("Hello from AsteriaForge!")
         }
     }
 }
