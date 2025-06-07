@@ -1,5 +1,7 @@
 import SwiftUI
 
+/// A SwiftUI view providing controls to adjust the filtering
+/// parameters for star catalogue generation, such as Field of View and Magnitude.
 struct FilterControlsView: View {
     @Binding var maxMagnitude: Double
     @Binding var centerRA: Double
